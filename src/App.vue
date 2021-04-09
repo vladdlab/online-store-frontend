@@ -1,9 +1,5 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view />
+  <router-view></router-view>
 </template>
 
 <style lang="scss">
@@ -13,11 +9,18 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  height: 100%;
+}
+html {
+  height: 100%;
+}
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
 }
 
 #nav {
-  padding: 30px;
-
   a {
     font-weight: bold;
     color: #2c3e50;
@@ -26,5 +29,14 @@
       color: #42b983;
     }
   }
+}
+
+.page-fade-enter-active,
+.component-fade-leave-active {
+  transition: all 0.5s ease;
+}
+.page-fade-enter,
+.component-fade-leave-to {
+  opacity: 0;
 }
 </style>
